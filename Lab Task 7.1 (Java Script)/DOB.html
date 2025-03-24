@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gender Validation</title>
+
+<input type="text" id="dd" placeholder="dd" size="2"> /
+<input type="text" id="mm" placeholder="mm" size="2"> /
+<input type="text" id="yyyy" placeholder="yyyy" size="4">
+<button onclick="validateDOB()">Submit</button>
+
+<script>
+    function validateDOB() {
+        let dd = document.getElementById("dd").value;
+        let mm = document.getElementById("mm").value;
+        let yyyy = document.getElementById("yyyy").value;
+
+        if (dd === "" || mm === "" || yyyy === "" || dd < 1 || dd > 31 || mm < 1 || mm > 12 || yyyy < 1900 || yyyy > 2016) {
+            alert("Invalid Date of Birth");
+        } else {
+            alert("Valid Date of Birth!");
+        }
+    }
+</script>
+</head>
+</html>

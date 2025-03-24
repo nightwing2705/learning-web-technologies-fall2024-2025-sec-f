@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Validation</title>
+    <script>
+        function validateName() {
+            let name = document.getElementById("name").value.trim();
+            if (name === "" || name.split(" ").length < 2) {
+                alert("Enter at least two words.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateName()">
+        <input type="text" id="name" placeholder="Enter full name">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+    <script>
+        function validateEmail() {
+            let email = document.getElementById("email").value.trim();
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter a valid email.");
+                return false;
+            }
+            return true;
+        }
+
+        function showHint() {
+            alert("Example: sample@example.com");
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateEmail()">
+        <input type="text" id="email" placeholder="Enter email">
+        <button type="button" onclick="showHint()">i</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
